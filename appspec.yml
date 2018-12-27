@@ -13,4 +13,3 @@ hooks:
   ApplicationStart:
     - location: cp-scripts/start.sh
       timeout: 180
-      
