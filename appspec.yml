@@ -7,7 +7,7 @@ hooks:
   ApplicationStop:
     - location: cp-scripts/stop.sh
       timeout: 180
-  Install:
+  BeforeInstall:
     - location: cp-scripts/build.sh
       timeout: 180
   ApplicationStart:
