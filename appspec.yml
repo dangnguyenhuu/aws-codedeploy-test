@@ -1,0 +1,16 @@
+﻿version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/codedeploytest/git
+hooks:
+  ApplicationStop:
+    - location: cp-scripts/stop.sh
+      timeout: 180
+  Install:
+    - location: cp-scripts/build.sh
+      timeout: 180
+  ApplicationStart:
+    - location: cp-scripts/start.sh
+      timeout: 180
+      
