@@ -5,6 +5,11 @@ phases:
     commands:
       - echo Build started on `date`
       - dotnet publish --configuration Release AwsCodeDeployTest
+  post_build:
+    commands:
+      - echo Post Build started on `date`
+      - cp appspec.yml AwsCodeDeployTest/bin/Release/netcoreapp2.1/publish/*
+      - cp -r cp-scripts AwsCodeDeployTest/bin/Release/netcoreapp2.1/publish
 artifacts:
   files:
     - AwsCodeDeployTest/bin/Release/netcoreapp2.1/publish/*
