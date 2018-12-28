@@ -8,7 +8,7 @@ phases:
   post_build:
     commands:
       - echo Post Build started on `date`
-      - cp appspec.yml AwsCodeDeployTest/bin/Release/netcoreapp2.1/publish/*
+      - cp appspec.yml AwsCodeDeployTest/bin/Release/netcoreapp2.1/publish
       - cp -r cp-scripts AwsCodeDeployTest/bin/Release/netcoreapp2.1/publish
 artifacts:
   files:
