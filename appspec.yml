@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: /AwsCodeDeployTest/bin/Release/netcoreapp2.1/publish/
     destination: /home/codedeploytest/publish/
 hooks:
   ApplicationStop:
